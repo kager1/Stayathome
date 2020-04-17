@@ -1,0 +1,35 @@
+header{
+	height:50px;	
+	background-color:purple;
+	display:flex;
+	align-items: center;
+}
+
+.cyan{
+	height:30px;
+	width:100px;
+/*	border: 1px solid black; */
+	background-color:cyan;
+	margin:10px;
+	display:flex;
+}
+#middle{
+	width:150px;
+}
+
+div {
+	height:500px;
+	display:flex;
+
+}
+
+left{
+	background-color:yellow;
+	flex-grow: 4;
+	
+}
+right{
+	background-color:lime;
+	flex-grow: 1;
+
+}

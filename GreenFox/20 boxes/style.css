@@ -1,0 +1,30 @@
+main {
+    display: flex;
+    flex-direction: column;
+    width: max-content;
+}
+
+div {
+    display: inline-flex;
+    border: 1px solid lightskyblue;
+    padding: 10px;
+}
+
+p {
+    width: 40px;
+    height: 40px;
+    margin: 5px;
+    background-color: lightskyblue;
+}
+
+.purple {
+    background-color: orangered;
+    margin-top: 10px;
+}
+
+a {
+    width: 40px;
+    height: 40px;
+    margin: 5px;
+    background-color: purple;
+}
