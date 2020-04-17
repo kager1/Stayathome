@@ -1,0 +1,16 @@
+div{
+    display:flexbox;
+    width: 200px;
+}
+p{
+    border:1px solid black;
+    border-bottom: none;
+    margin:0px;
+}
+.lastbox{
+    border-bottom: 1px solid black;
+}
+p:hover {
+    background-color:orange;
+  }
+  

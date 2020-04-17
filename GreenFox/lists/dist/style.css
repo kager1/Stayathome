@@ -1,0 +1,16 @@
+main{
+	width:400px;
+}
+h1{
+	color:orange;
+}
+h2{
+	color: purple;
+}
+ol{
+	list-style-type: upper-roman;
+	text-decoration: underline;
+}
+.purp{
+	color:blue;
+}
