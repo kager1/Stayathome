@@ -1,29 +1,31 @@
-//let countOfitems = 0
-let liststring = []
-let listobject = ""
+let todoadd = []
 
-$("#addone").click(() => {
-    //    countOfitems++
-    //    liststring = [$("#listitem").val()];
-    if ($("#listitem").val() == 0) {
-        console.log("nothing to add");
-    }
-    else {
-        liststring.push($("#listitem").val());
-        listobject = $("#listitem").val()
-        console.log(listobject);
-        $("#listitem").val("")
-        //$("ul").append(`<li class="">${listobject}</li>`)
-        $("ul").append('<li class="">' + liststring.slice(-1) + '</li>')
+$("#addone").click(function () {
+    todoadd.push($("input").val())
+    console.log(todoadd);
+    last_element = todoadd[todoadd.length - 1];
+    $("#main").append('<div class="list"><p>' + last_element + '</p></div>')
 
-    };
+ /*    var clicked;
+    $('.list').click(function () {
+        clicked = $(this);
+    });
+    $(clicked).toggleClass("stroke"); */
+})
+    $("div.list").on('click', function () {
+        console.log("katt")
+        $("p").toggleClass("stroke")
+})
 
-    $("li").click(function () {
-            $(this).toggleClass("stroked" );
-        }
-        //$("li").toggleClass( "stroked", addOrRemove )
-        //$li.toggleClass('stroked')
-        //$(this).css("text-decoration", "line-through")
-    )
 
-});
+
+/* $("h1").on( "click", function() {
+    console.log( 'This item was clicked' );
+  });
+
+$(document).on("click", "list" , function() {
+    $(this).parent().remove()});
+
+$("li").on('click',function() {
+        $(this).css("background-color", "lime");
+}) */
