@@ -4,6 +4,16 @@ $("#button1").click(() => {
 $("#button2").click(() => {
     $("#button1").text("Yeah button")
 });
+
+let clicksCounter = 0
+
 $("#button3").on('click', () => {
-    $("button").css("background-color", "magenta")
+    clicksCounter++
+    console.log(clicksCounter)
+    value = $("#getcolor").val();
+    if (clicksCounter < 2) {
+        $("button").css("background-color", value)
+
+    }
+    
 });
