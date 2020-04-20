@@ -1,4 +1,9 @@
 #main{
-    width:800px;
+    width:600px;
+    background-color: slategray;
     margin: auto;
+}
+
+.stroked{
+    text-decoration: line-through;
 }
