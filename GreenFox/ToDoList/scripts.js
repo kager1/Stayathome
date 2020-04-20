@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 let todoadd = []
 
 $("#addone").click(function () {
@@ -29,3 +30,20 @@ $(document).on("click", "list" , function() {
 $("li").on('click',function() {
         $(this).css("background-color", "lime");
 }) */
+=======
+let countOfitems = 0
+
+$("#addone").click(() =>{
+    countOfitems++
+    liststring = $("#listitem").val();
+    console.log(liststring)
+    $("#main").append('<div><h2>' + liststring + '</div></h2>')
+    $("#listitem").val("")
+})
+
+/* $("#addone").on('click', () => {
+    countOfitems++
+    let liststring = $("#listitem").val();
+    $("ul").append("<li>"liststring"</li>")
+)}; */
+>>>>>>> parent of 31f4e81... almost working
