@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,16 +8,31 @@
     <link rel="stylesheet" href="style.css">
 
 </head>
-<body>
-    
-    <div class="photovier">
 
+<body>
+
+    <div class="photoviewer">
+        <!-- <section > -->
+        <img class="left" src="images/arrow.svg" alt="left arrow">
+        <!-- </section> -->
+        <section class="viewer">
+            <img id="photo" src="images/photo1.jpg">
+            <div class="gray-container">
+                <h1 id="photo-title"></h1>
+                <p id="photo-description"></p>
+            </div>
+        </section>
+        <!-- <section > -->
+        <img class="right" src="images/arrow.svg" alt="right arrow">
+        <!-- </section> -->
     </div>
     <div class="thumbnails">
-        
+
     </div>
 
-<script src="https://code.jquery.com/jquery-3.5.0.js" integrity="sha256-r/AaFHrszJtwpe+tHyNi/XCfMxYpbsRg2Uqn0x3s2zc=" crossorigin="anonymous"></script>   
-<script src="scripts.js"></script>    
+    <script src="https://code.jquery.com/jquery-3.5.0.js"
+        integrity="sha256-r/AaFHrszJtwpe+tHyNi/XCfMxYpbsRg2Uqn0x3s2zc=" crossorigin="anonymous"></script>
+    <script src="scripts.js"></script>
 </body>
+
 </html>

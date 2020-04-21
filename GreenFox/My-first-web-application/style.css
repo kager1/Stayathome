@@ -1,0 +1,37 @@
+body{
+    background-color: #808080;
+}
+.photoviewer{
+    max-width: fit-content;
+    height: 400px;
+    margin: auto;
+    margin-top: 50px;
+    /* border:1px solid red; */
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    background-color: lightgrey;
+
+}
+
+.left{
+    margin: 0px 20px;
+}
+
+#photo{
+    max-height: 400px;
+    border: 1px solid white;
+
+}
+.right{
+    transform: rotate(0.5turn);
+    margin: 0px 20px;
+}
+.viewer{
+    display: flex;
+    justify-content: center;
+    /* border:1px solid lime; */
+    /* width:800px; */
+    height: 400px;
+    background-color: #35363A;
+}
