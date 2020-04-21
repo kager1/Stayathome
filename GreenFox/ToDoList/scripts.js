@@ -14,12 +14,20 @@ $("#addone").click(() => {
         console.log(listobject);
         $("#listitem").val("")
         //$("ul").append('<li class="">' + liststring.slice(-1) + '</li>')
-        $("ul").append('<li>' + listobject + '</li>')
-
+        $("ul").append('<li class="">' + listobject + '</li>')
+        // $("main").push('<ul><li>' + listobject + '</li></ul>')
     };
+    $('div.shopping').on('click', function () {
+        if ($(this).hasClass("stroke")) {
+            $(this).removeClass("stroke")
+        } else {
+            $(this).addClass("stroke")
+        }
 
-    $("ul").on("click", "li", function () {
-        $(this).toggleClass("stroke")
+    // $("div ul").on("click", "li", function () {
+        // $(this).children().css('background','red');
+        // $(this).toggleClass("stroke")
+        console.log("katt a listán")
     })
 
 /*     $("li").click(function () {
