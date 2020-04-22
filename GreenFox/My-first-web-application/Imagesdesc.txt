@@ -1,0 +1,47 @@
+let data = {
+  photo: 'images/photo1.jpg',
+  title: 'Tavasz Japánban',
+  description: 'Szép kert az első napon Kyoto-ban'
+};
+let data = {
+  photo: 'images/photo2.jpg',
+  title: 'Bory-vár',
+  description: 'Egy szép nap a székesfehérvári Bory-várban'
+};
+let data = {
+  photo: 'images/photo3.jpg',
+  title: 'Ködben',
+  description: 'Pásztor kunyhók a Nagy-Bihar alatt'
+};
+let data = {
+  photo: 'images/photo4.jpg',
+  title: 'Hubertlaki-tó',
+  description: 'A bakonyi "Gyilkos-tó"'
+};
+let data = {
+  photo: 'images/photo5.jpg',
+  title: 'Giewont',
+  description: 'Pihenő a Giewont-nyereg alatt'
+};
+let data = {
+  photo: 'images/photo6.jpg',
+  title: 'Disznócska',
+  description: 'Felejthetetlen túra a Lengyel-Tátrában'
+};
+let data = {
+  photo: 'images/photo7.jpg',
+  title: 'Nagy-Hárs-hegy',
+  description: 'Kilátás a János-hegyre a Kaán Károly kilátóból'
+};
+let data = {
+  photo: 'images/photo8.jpg',
+  title: 'Bakulya-sori szélmalom',
+  description: 'Elhagyott szélmalom a Békés megyei Örménykút közelében'
+};
+let data = {
+  photo: 'images/photo9.jpg',
+  title: 'Prédikálószék',
+  description: 'A Dunakanyar a Prédikálószéki-kilátóból'
+};
+
+let photo = ['images/photo1.jpg','images/photo2.jpg','images/photo3.jpg','images/photo4.jpg','images/photo5.jpg','images/photo6.jpg','images/photo7.jpg','images/photo8.jpg','images/photo9.jpg',]
