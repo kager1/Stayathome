@@ -9,7 +9,7 @@ let description = ['Szép kert az első napon Kyoto-ban', 'Egy szép nap a szék
     'Pásztor kunyhók a Nagy-Bihar alatt', 'A bakonyi "Gyilkos-tó"', 'Pihenő a Giewont-nyereg alatt',
     'Felejthetetlen túra a Lengyel-Tátrában', 'Kilátás a János-hegyre a Kaán Károly kilátóból',
     'Elhagyott szélmalom a Békés megyei Örménykút közelében', 'A Dunakanyar a Prédikálószéki-kilátóból']
-console.log(description[4])
+// console.log(description[4])
 
 // let data = {
 //     photo: 'Images/photo1.jpg',
@@ -33,7 +33,7 @@ let loadPhoto = (photoNumber) => {
 
     let imagesData = [photo[currentPhoto], title[currentPhoto], description[currentPhoto]];
     console.log(imagesData)
-    $('#photo').attr('src', imagesData[0]);
+    $('#photo').attr('src', imagesData[0]); // imagesData 0 = fotó, 1 = cím, 2 = leírás
     $('#photo-title').text(imagesData[1]);
     $('#photo-description').text(imagesData[2]);
 }
@@ -58,3 +58,33 @@ $('#left-arrow').click(() => {
         loadPhoto(currentPhoto);
     }
 })
+
+// console.log(photo)
+
+photo.forEach((item, index) => {    /* betölti a képeket a thumbnailekbe */
+    console.log(item + index)
+    // $('.thumbnails').append(`<div class="box" photo-index="${index}">
+    // ${item} (photo-index="${index}")</div>`);
+    $('.thumbnails').append(`<div><img class="thumbs" data-index="${index}
+     id="thumb${index}" src="${item}"></div>`)
+
+    $('img.thumbs').click(() => {       /*thumbnail kattintást végrehajtja */
+        let indexClicked = $(event.target).attr('data-index');
+        let numberIndex = parseInt(indexClicked);
+        currentPhoto = numberIndex
+        loadPhoto(currentPhoto);
+    })
+    // $('.thumbs').click((event) => {
+    //     let indexClicked = $(event.target).attr('data-index');
+    //     // indexClicked is now a string! if you need it as a number you have to change it
+    //     // because for example "1" + 1 is going to be "11" and not 2
+    //     console.log(indexClicked)
+
+    //     let numberIndex = parseInt(indexClicked);
+    //     // now numberIndex is a number
+    //     //$('#clicked').text(data[indexClicked]);
+    // });
+});
+
+
+
