@@ -81,7 +81,4 @@ photo.forEach((item, index) => {    /* betölti a képeket a thumbnailekbe */
 
 
 });
-
-
-
-
+$(`.thumbs[data-index=${currentPhoto}]`).addClass('active')
