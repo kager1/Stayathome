@@ -32,15 +32,16 @@ let currentPhoto = 0;
 let loadPhoto = (photoNumber) => {
 
     let imagesData = [photo[currentPhoto], title[currentPhoto], description[currentPhoto]];
-    console.log(imagesData)
-    $('#photo').attr('src', imagesData[0]); // imagesData 0 = fotó, 1 = cím, 2 = leírás
+    $('#photo').attr('src', imagesData[0]); // imagesData 0 = fotó elérési út, 1 = cím, 2 = leírás
     $('#photo-title').text(imagesData[1]);
     $('#photo-description').text(imagesData[2]);
+    $('.thumbs').removeClass('active')      // kiemeli az aktív thumbnailt
+    $(`.thumbs[data-index=${currentPhoto}]`).addClass('active')
 }
 
 loadPhoto(currentPhoto);
 
-$('#right-arrow').click(() => {
+$('#right-arrow').click(() => {     /* előre lapozás */
     if (currentPhoto < 8) {
         currentPhoto++;
         loadPhoto(currentPhoto);
@@ -49,7 +50,7 @@ $('#right-arrow').click(() => {
         loadPhoto(currentPhoto);
     }
 })
-$('#left-arrow').click(() => {
+$('#left-arrow').click(() => {      /* vissza lapozás */
     if (currentPhoto > 0) {
         currentPhoto--;
         loadPhoto(currentPhoto);
@@ -62,29 +63,25 @@ $('#left-arrow').click(() => {
 // console.log(photo)
 
 photo.forEach((item, index) => {    /* betölti a képeket a thumbnailekbe */
-    console.log(item + index)
+    // console.log(item + index)
     // $('.thumbnails').append(`<div class="box" photo-index="${index}">
     // ${item} (photo-index="${index}")</div>`);
-    $('.thumbnails').append(`<div><img class="thumbs" data-index="${index}
+    $('.thumbnails').append(`<div class="thumbcont"><div class="thumbtitle">${title[index]}</div><img class="thumbs" data-index="${index}"
      id="thumb${index}" src="${item}"></div>`)
+
 
     $('img.thumbs').click(() => {       /*thumbnail kattintást végrehajtja */
         let indexClicked = $(event.target).attr('data-index');
         let numberIndex = parseInt(indexClicked);
         currentPhoto = numberIndex
         loadPhoto(currentPhoto);
+        // $('#thumb'+currentPhoto).css('border-width', '3px')
+        
     })
-    // $('.thumbs').click((event) => {
-    //     let indexClicked = $(event.target).attr('data-index');
-    //     // indexClicked is now a string! if you need it as a number you have to change it
-    //     // because for example "1" + 1 is going to be "11" and not 2
-    //     console.log(indexClicked)
 
-    //     let numberIndex = parseInt(indexClicked);
-    //     // now numberIndex is a number
-    //     //$('#clicked').text(data[indexClicked]);
-    // });
+
 });
+
 
 
 
